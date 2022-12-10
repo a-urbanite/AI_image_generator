@@ -1,7 +1,12 @@
 import express from "express";
-import { router } from "../routes/openaiRoutes.js";
+import { router } from "./routes/openaiRoutes.js";
 import path from 'path';
 import {fileURLToPath} from 'url';
+import dotenv from "dotenv";
+dotenv.config();
+const port = process.env.PORT || 3000;
+
+//start server
 
 const app = express();
 
@@ -21,4 +26,5 @@ app.get("/api/test", (req, res) => {
   res.status(200).send('Hello World')
 });
 
+app.listen(port, () => console.log(`Server started on port ${port}`));
 export default app;
