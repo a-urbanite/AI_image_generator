@@ -29,4 +29,4 @@ app.get("/api/test", (req, res) => {
 //start server
 // app.listen(port, () => console.log(`Server started on port ${port}`));
 
-export { app };
+export default app;
