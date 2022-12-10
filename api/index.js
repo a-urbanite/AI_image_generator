@@ -23,8 +23,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use("/api/openai", router);
 
 app.get("/api/test", (req, res) => {
-  res.send("Hello world!");
+  res.status(200).send('Hello World')
 });
 
 //start server
 // app.listen(port, () => console.log(`Server started on port ${port}`));
+
+export { app };
