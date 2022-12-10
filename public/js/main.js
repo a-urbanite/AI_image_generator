@@ -3,7 +3,7 @@ window.document.getElementById('button').addEventListener('click', async () => {
   const imageSize = window.document.getElementById('sizeInput').value
   // console.log(prompt, imageSize)
 
-  const response = await fetch('/openai/generateImage', {
+  const response = await fetch('/api/openai/generateImage', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
