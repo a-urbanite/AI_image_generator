@@ -1,12 +1,11 @@
-window.document.getElementById('button').addEventListener('click', async () => {  
-  const prompt = window.document.getElementById('promptInput').value
-  const imageSize = window.document.getElementById('sizeInput').value
-  // console.log(prompt, imageSize)
+window.document.getElementById("button").addEventListener("click", async () => {
+  const prompt = window.document.getElementById("promptInput").value;
+  const imageSize = window.document.getElementById("sizeInput").value;
 
-  const response = await fetch('/api/openai/generateImage', {
-    method: 'POST',
+  const response = await fetch("/api/openai/generateImage", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       prompt,
@@ -14,9 +13,9 @@ window.document.getElementById('button').addEventListener('click', async () => {
     }),
   });
 
-  const data = await response.json()
+  const data = await response.json();
 
-  window.document.getElementById('image').setAttribute('src', data.data)
-
-  console.log(data)
-})
+  window.document.getElementById("loading").style.display = "none";
+  window.document.getElementById("image").style.display = "block";
+  window.document.getElementById("image").setAttribute("src", data.data);
+});

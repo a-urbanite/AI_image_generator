@@ -26,5 +26,5 @@ app.get("/api/test", (req, res) => {
   res.status(200).send('Hello World')
 });
 
-app.listen(port, () => console.log(`Server started on port ${port}`));
+app.listen(port, () => console.log(`Server started on port http://localhost:${port}/`));
 export default app;

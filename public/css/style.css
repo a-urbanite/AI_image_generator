@@ -1,0 +1,15 @@
+#image {
+  display: none;
+}
+
+.modal-body {
+  /* background-color: red; */
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}

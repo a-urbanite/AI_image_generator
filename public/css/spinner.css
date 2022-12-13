@@ -1,0 +1,19 @@
+
+#loading {
+  /* scale: 2; */
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  border: 3px solid rgb(209, 209, 209);
+  border-radius: 50%;
+  border-top-color: rgb(68, 68, 68);
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
